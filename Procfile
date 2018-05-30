@@ -1,3 +1,3 @@
-worker: python3 LongPollBot12.py.py
+worker: python3 LongPollBot12.py
 
 
