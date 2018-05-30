@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 import requests
