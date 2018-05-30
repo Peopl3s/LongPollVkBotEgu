@@ -8,7 +8,7 @@ def answer(path):
     with open(path,"r") as file:
         return random.choice(list(file.read().split('\n')))
     
-def parseJson(jsonFile='content.json',jsonList='listcontent.json'):
+def parseJson(jsonFile='Res/content.json',jsonList='Res/listcontent.json'):
     content={}
     try:
         jsObj = open(jsonFile, "r")
@@ -49,9 +49,9 @@ def main():
                                                    content[event.text]['id_content']
                                                    ))
                 msg=content[event.text]['message'].encode('windows-1251')
-            elif (len(event.text)>0 and event.text.lower() in list(open('hello.txt',"r").read().split('\n'))):
+            elif (len(event.text)>0 and event.text.lower() in list(open('Res/hello.txt',"r").read().split('\n'))):
                 firstname=getName(vk_session,event.user_id)
-                msg=answer('helloansw.txt').format(firstname)
+                msg=answer('Res/helloansw.txt').format(firstname)
             else:
                 msg='Ошибка. Список возможных команд: https://vk.com/id439685153?w=wall439685153_2'
             vk.messages.send(
