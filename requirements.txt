@@ -1,6 +1,3 @@
 vk_api
 requests
-json
-random
-VkLongPoll
-VkEventType
+
