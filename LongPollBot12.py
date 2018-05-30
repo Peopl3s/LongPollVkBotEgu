@@ -51,7 +51,7 @@ def main():
                 msg=content[event.text]['message'].encode('windows-1251')
             elif (len(event.text)>0 and event.text.lower() in list(open('Res/hello.txt',"r",encoding='windows-1251').read().split('\n'))):
                 firstname=getName(vk_session,event.user_id)
-                msg=answer('Res/helloansw.txt').format(firstname)
+                msg=answer('Res/helloansw.txt').format(firstname).encode('windows-1251')
             else:
                 msg='Ошибка. Список возможных команд: https://vk.com/id439685153?w=wall439685153_2'
             vk.messages.send(
