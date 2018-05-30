@@ -1,3 +1,3 @@
-web: python3 LongPollBot12.py
+web: LongPollBot12.py
 
 
