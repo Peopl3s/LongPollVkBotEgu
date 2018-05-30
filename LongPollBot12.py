@@ -5,7 +5,7 @@ import json
 import random
 
 def answer(path):
-    with open(path,"r") as file:
+    with open(path,"r",encoding='windows-1251') as file:
         return random.choice(list(file.read().split('\n')))
     
 def parseJson(jsonFile='Res/content.json',jsonList='Res/listcontent.json'):
