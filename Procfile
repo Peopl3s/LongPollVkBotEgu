@@ -1,1 +1,1 @@
-web: npm start LongPollBot12.py
+web: LongPollBot12.py
