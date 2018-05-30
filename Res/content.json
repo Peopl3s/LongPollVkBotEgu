@@ -1,0 +1,26 @@
+{
+     "access_token":"token",
+     "contacts":
+	 { 
+	    "owner_id":"439685153",
+	    "id_content":"456239018",
+	    "type":"photo",
+		"message":"Контакты"
+	  }
+	 ,
+	 
+	 "titlepage":
+	 {   "owner_id":439685153,
+	      "id_content":448200700,
+		  "type":"doc",
+		  "message":"Титульный лист для рефератов"
+      },
+      "linkegu":
+	  {
+	    "owner_id":"",
+	    "id_content":"",
+		"type":"",
+	    "message":"http://elsu.ru"	  
+	  }
+     
+}
