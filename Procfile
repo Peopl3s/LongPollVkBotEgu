@@ -1,3 +1,4 @@
-web: gunicorn LongPollBot12.py
+web: python LongPollBot12.py runserver 0.0.0.0:5000
+
 
 
