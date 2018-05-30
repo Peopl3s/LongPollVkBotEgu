@@ -49,7 +49,7 @@ def main():
                                                    content[event.text]['id_content']
                                                    ))
                 msg=content[event.text]['message'].encode('windows-1251')
-            elif (len(event.text)>0 and event.text.lower() in list(open('Res/hello.txt',"r").read().split('\n'))):
+            elif (len(event.text)>0 and event.text.lower() in list(open('Res/hello.txt',"r",encoding='windows-1251').read().split('\n'))):
                 firstname=getName(vk_session,event.user_id)
                 msg=answer('Res/helloansw.txt').format(firstname)
             else:
