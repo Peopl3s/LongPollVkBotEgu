@@ -5,7 +5,9 @@ import json
 import random
 
 def answer(path):
-    '''Генерирует случайный ответ (строку) из текствого файл path'''
+    '''Генерирует случайный ответ (строку) из текствого файл path
+    
+    '''
     with open(path, "r", encoding='windows-1251') as file:
         return random.choice(list(file.read().split('\n')))
     
@@ -47,13 +49,17 @@ def parseJson(jsonFile='Res/content.json', jsonList='Res/listcontent.json'):
     return content
 
 def getName(vk_session, uid):
-    '''Получает имя собеcедника, с помощью метода VK API'''
+    '''Получает имя собеcедника, с помощью метода VK API
+    
+    '''
      with vk_api.VkRequestsPool(vk_session) as pool:
          name = pool.method_one_param('users.get', key='user_id', values=(uid,))
      return name.result[uid][0]['first_name']
 
 def main():
-    '''Функция реализующая непосредственно работу бота'''
+    '''Функция реализующая непосредственно работу бота
+    
+    '''
     content = parseJson()
     session = requests.Session()
     vk_session = vk_api.VkApi(token=content['token'])
