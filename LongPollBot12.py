@@ -5,14 +5,16 @@ import json
 import random
 
 def answer(path):
-    '''Генерирует случайный ответ (строку) из текстового файла path
+    '''
+    Генерирует случайный ответ (строку) из текстового файла path
     
     '''
     with open(path, "r", encoding='windows-1251') as file:
         return random.choice(list(file.read().split('\n')))
     
 def parseJson(jsonFile='Res/content.json', jsonList='Res/listcontent.json'):
-    '''Получает данные из json-файлов, необходимых для работы бота.
+    '''
+    Получает данные из json-файлов, необходимых для работы бота.
 
       jsonFile - json-файл, хранит acces_token и необходимый набор атрибутов
       для каждой запращиваемой команды.
@@ -49,7 +51,8 @@ def parseJson(jsonFile='Res/content.json', jsonList='Res/listcontent.json'):
     return content
 
 def getName(vk_session, uid):
-    '''Получает имя собеcедника, с помощью метода VK API
+    '''
+    Получает имя собеcедника, с помощью метода VK API
     
     '''
      with vk_api.VkRequestsPool(vk_session) as pool:
@@ -57,7 +60,8 @@ def getName(vk_session, uid):
      return name.result[uid][0]['first_name']
 
 def main():
-    '''Функция, реализующая непосредственно работу бота
+    '''
+    Функция, реализующая непосредственно работу бота
     
     '''
     content = parseJson()
